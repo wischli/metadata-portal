@@ -6,5 +6,5 @@ test("renders ok", () => {
 });
 
 test("data file exists", async () => {
-  require("../chains.json");
+  require("../../public/data.json");
 });
