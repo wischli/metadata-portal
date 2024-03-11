@@ -7,6 +7,10 @@ import { Hr } from "./Hr";
 import { Links } from "./Links";
 import { Row } from "./Row";
 import { icon } from "../icons";
+import {
+  CheckBadgeIcon,
+  ExclamationCircleIcon,
+} from "@heroicons/react/24/solid";
 
 function tabFromSearch() {
   const params = new URLSearchParams(location.search);
@@ -35,7 +39,7 @@ export const Network = ({
     setTabToSearch(v);
     setSelectedTab(v);
   }
-
+  const svgClass = "inline mr-2 h-7";
   const vaultLink = (
     <a
       href="https://parity.io/signer/"
@@ -89,6 +93,19 @@ export const Network = ({
                   src={process.env.PUBLIC_URL + spec.specsQr.path}
                   alt="Qr code"
                 />
+                <div className="flex justify-center text-lg font-medium">
+                  {spec.specsQr.signedBy ? (
+                    <div className="text-green-700">
+                      <CheckBadgeIcon className={svgClass} />
+                      Signed by {spec.specsQr.signedBy}
+                    </div>
+                  ) : (
+                    <div className="text-red-500">
+                      <ExclamationCircleIcon className={svgClass} />
+                      Unsigned
+                    </div>
+                  )}
+                </div>
                 <div className="text-center text-sm text-black opacity-50">
                   {"Scan this code to add chain specs to the "}
                   {vaultLink}
@@ -118,6 +135,23 @@ export const Network = ({
                       {"Scan this code to update "}
                       {vaultLink}
                     </div>
+                    <div className="flex justify-center text-lg font-medium">
+                      {spec.metadataQr?.file.signedBy ? (
+                        <div className="text-green-700">
+                          <CheckBadgeIcon className={svgClass} />
+                          Signed by {spec.metadataQr?.file.signedBy}
+                        </div>
+                      ) : (
+                        <div className="text-red-500">
+                          <ExclamationCircleIcon className={svgClass} />
+                          Unsigned
+                        </div>
+                      )}
+                    </div>
+                    <div className="text-center text-sm text-black opacity-50">
+                      {"Scan this code to add chain specs to the "}
+                      {vaultLink}
+                    </div>
                   </div>
                 )}
               </div>
@@ -133,7 +167,7 @@ export const Network = ({
                     <button
                       className={cn(
                         "flex-1 p-3 rounded-full focus:outline-none",
-                        selected && "text-white",
+                        selected && "text-white"
                       )}
                       style={{ backgroundColor: selected ? spec.color : "" }}
                     >

@@ -148,13 +148,26 @@ export const FAQ = () => (
               <OrdinalNumber>2</OrdinalNumber>
               <div className="pt-1">
                 <a
+                  href="https://centrifuge.github.io/metadata-portal/"
+                  rel="noopener noreferrer"
+                  className="font-bold underline"
+                >
+                  Centrifuge
+                </a>{" "}
+                for Centrifuge and Altair parachains
+              </div>
+            </li>
+            <li className="flex items-top">
+              <OrdinalNumber>2</OrdinalNumber>
+              <div className="pt-1">
+                <a
                   href="https://metadata.novasama.io/#/darwinia%20parachain"
                   rel="noopener noreferrer"
                   className="font-bold underline"
                 >
                   Novasama
                 </a>{" "}
-                for Parachains and Solochains
+                for other Parachains and Solochains
               </div>
             </li>
           </ol>
