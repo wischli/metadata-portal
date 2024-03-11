@@ -1,6 +1,7 @@
 {
   "name": "metadata-portal",
   "version": "0.1.0",
+  "homepage": "http://wischli.github.io/metadata-portal",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^1.7.10",
