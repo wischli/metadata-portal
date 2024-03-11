@@ -59,7 +59,7 @@ export const FAQ = () => (
                 The first step is to locate the network that needs metadata
                 updating in <strong className="font-bold">Parity</strong> or{" "}
                 <strong className="font-bold">Novasama</strong>. Note: To
-                navigate between the two portals, use the Metadata Portal
+                navigate between the three portals, use the Metadata Portal
                 dropdown at the top of the page.
               </div>
             </li>
@@ -148,13 +148,26 @@ export const FAQ = () => (
               <OrdinalNumber>2</OrdinalNumber>
               <div className="pt-1">
                 <a
+                  href="https://centrifuge.github.io/metadata-portal/"
+                  rel="noopener noreferrer"
+                  className="font-bold underline"
+                >
+                  Centrifuge
+                </a>{" "}
+                for Centrifuge and Altair parachains
+              </div>
+            </li>
+            <li className="flex items-top">
+              <OrdinalNumber>2</OrdinalNumber>
+              <div className="pt-1">
+                <a
                   href="https://metadata.novasama.io/#/darwinia%20parachain"
                   rel="noopener noreferrer"
                   className="font-bold underline"
                 >
                   Novasama
                 </a>{" "}
-                for Parachains and Solochains
+                for other Parachains and Solochains
               </div>
             </li>
           </ol>

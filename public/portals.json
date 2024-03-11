@@ -3,6 +3,10 @@
     "name": "Parity",
     "url": "https://metadata.parity.io/"
   },
+  "centrifuge": {
+    "name": "Centrifuge",
+    "url": "https://centrifuge.github.io/metadata-portal/"
+  },
   "novasama": {
     "name": "Novasama",
     "url": "https://metadata.novasama.io/"
